@@ -7,28 +7,30 @@ export const meta: V2_MetaFunction = (): MetaDescriptor[] => {
 
 export default function Index(): JSX.Element {
   return (
-    <div
-      className={`py-1 flex flex-col justify-center items-center grow text-2xl`}>
-      <div>
-        This is the foundation for project{" "}
-        <Link
-          target={"_blank"}
-          to={"https://github.com/mind0bender/dotlength"}
-          className={`px-2 py-1 ring-1 hover:ring-2 ring-slate-950 dark:ring-white hover:ring-emerald-400 duration-100`}>
-          <span className={`text-emerald-400`}>.</span>
-          length
-        </Link>
-      </div>
-      <div>
-        started by mad coder{" "}
-        <Link
-          className={`underline decoration-wavy decoration-emerald-400`}
-          target={"_blank"}
-          to="https://github.com/mind0bender">
-          mind0bender
-        </Link>
+    <main
+      className={`py-1 px-8 flex flex-col sm:flex-row-reverse gap-12 justify-center items-center grow text-lg sm:text-xl md:text-2xl text-center`}>
+      <div className={`flex flex-col justify-center items-center`}>
+        <div>
+          This is the foundation for project{" "}
+          <Link
+            target={"_blank"}
+            to={"https://github.com/mind0bender/dotlength"}
+            className={`px-2 py-1 ring-1 hover:ring-2 ring-slate-950 dark:ring-white hover:ring-emerald-400 duration-100`}>
+            <span className={`text-emerald-400`}>.</span>
+            length
+          </Link>
+        </div>
+        <div>
+          started by mad coder{" "}
+          <Link
+            className={`underline decoration-wavy decoration-emerald-400`}
+            target={"_blank"}
+            to="https://github.com/mind0bender">
+            mind0bender
+          </Link>
+        </div>
       </div>
       <Outlet />
-    </div>
+    </main>
   );
 }

@@ -1,0 +1,40 @@
+{
+  "name": "dotlength",
+  "short_name": ".length",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "sizes": "180x180",
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "type": "image/png",
+      "sizes": "32x32",
+      "src": "/favicon-32x32.png",
+      "purpose": "any maskable"
+    },
+    {
+      "type": "image/png",
+      "sizes": "16x16",
+      "src": "/favicon-16x16.png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#34d399",
+  "background_color": "#020617",
+  "display": "standalone"
+}
