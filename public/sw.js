@@ -1,4 +1,5 @@
 self.addEventListener("install", (e) => {
+  console.log("service worker installed");
   e.waitUntil(
     caches
       .open("offline")
@@ -7,6 +8,10 @@ self.addEventListener("install", (e) => {
       })
       .catch(console.error)
   );
+});
+
+self.addEventListener("activate", (e) => {
+  console.log("service worker active");
 });
 
 self.addEventListener("fetch", (e) => {

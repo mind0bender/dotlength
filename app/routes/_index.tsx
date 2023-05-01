@@ -1,8 +1,14 @@
-import type { MetaDescriptor, V2_MetaFunction } from "@remix-run/node";
+import type { V2_MetaDescriptor, V2_MetaFunction } from "@remix-run/node";
 import { Link, Outlet } from "@remix-run/react";
 
-export const meta: V2_MetaFunction = (): MetaDescriptor[] => {
-  return [{ title: ".length" }];
+export const meta: V2_MetaFunction = (): V2_MetaDescriptor[] => {
+  return [
+    { title: ".length" },
+    {
+      name: "description",
+      content: "protect your secrets from bad guys.",
+    },
+  ];
 };
 
 export default function Index(): JSX.Element {

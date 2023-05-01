@@ -16,6 +16,10 @@ export function meta(): V2_MetaDescriptor[] {
     {
       title: "length.encrypt",
     },
+    {
+      name: "description",
+      content: "encrypt your secrets using dotlength",
+    },
   ];
 }
 
