@@ -11,7 +11,7 @@ function PageLayout({
 }: PageLayoutProps): JSX.Element {
   return (
     <div
-      className={`min-h-screen flex flex-col w-full dark:bg-slate-950 dark:text-white ${className}`}
+      className={`min-h-screen font-mono flex selection:bg-emerald-400 selection:text-slate-950 flex-col w-full dark:bg-slate-950 dark:text-white ${className}`}
       {...props}>
       <NavBar />
       {children}
