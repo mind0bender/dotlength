@@ -1,3 +1,17 @@
+import type { V2_MetaDescriptor } from "@remix-run/react";
+
+export function meta(): V2_MetaDescriptor[] {
+  return [
+    {
+      title: "length.0ffl!ne",
+    },
+    {
+      name: "description",
+      content: "You are currently Offline",
+    },
+  ];
+}
+
 function OfflinePage(): JSX.Element {
   return (
     <main

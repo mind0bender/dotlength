@@ -4,11 +4,11 @@ import Logo from "./logo";
 function NavBar(): JSX.Element {
   return (
     <nav
-      className={`sticky flex justify-between items-baseline bg-white dark:bg-slate-950 top-0 px-8 py-6 border-b border-b-slate-200 dark:border-b-slate-800`}>
+      className={`sticky flex justify-between items-baseline bg-white dark:bg-slate-950 top-0 px-4 sm:px-8 py-6 border-b border-b-slate-200 dark:border-b-slate-800`}>
       <Link to="/">
         <Logo />
       </Link>
-      <ul className={`text-xl flex gap-8`}>
+      <ul className={`text-lg sm:text-xl flex gap-2 sm:gap-8`}>
         <li>
           <NavLink
             className={`flex flex-col`}

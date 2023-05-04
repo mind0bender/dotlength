@@ -1,13 +1,17 @@
+const offlineAsstes = ["/offline", "/assets/images/offline.svg"];
+
 self.addEventListener("install", (e) => {
   console.log("service worker installed");
-  e.waitUntil(
-    caches
-      .open("offline")
-      .then((cache) => {
-        cache.addAll(["/", "/offline"]);
-      })
-      .catch(console.error)
-  );
+  if (!caches.has("offline")) {
+    e.waitUntil(
+      caches
+        .open("offline")
+        .then((cache) => {
+          cache.addAll(offlineAsstes);
+        })
+        .catch(console.error)
+    );
+  }
 });
 
 self.addEventListener("activate", (e) => {
@@ -15,6 +19,9 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
+  if (location.hostname == "localhost") {
+    return;
+  }
   e.respondWith(
     caches
       .match(e.request)

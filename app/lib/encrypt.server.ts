@@ -8,9 +8,7 @@ export interface Ratio {
 function encrypt(message: string): Ratio {
   console.log(`<"${message}>"`);
   const messageInASCII: string = convertToASCIIFloat(message); // 0.104101108108111 for hello
-  console.log({ messageInASCII });
   const ratio: Ratio = ASCIIToRatio(messageInASCII);
-  console.log(ratio, simplify(ratio));
   return simplify(ratio);
 }
 
@@ -30,10 +28,9 @@ function ASCIIToRatio(messageInASCII: string): Ratio {
   ratio.numerator = BigInt(messageInASCII);
 
   ratio.denominator = BigInt(
-    "1" +
-      Array(messageInASCII.length - 1)
-        .fill("0")
-        .join("")
+    `1${Array(messageInASCII.length - 1)
+      .fill("0")
+      .join("")}0`
   );
   return ratio;
 }
